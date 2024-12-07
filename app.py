@@ -4,7 +4,8 @@ from routes.vidros_comun import edit
 from routes.painel_vendas import vendas
 from models import db
 from config import Config
-from flask_migrate import Migrate
+from flask_migrate import Migrate[
+import os
 
 
 app = Flask(__name__)
