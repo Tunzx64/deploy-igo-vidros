@@ -194,7 +194,10 @@
                         
                         <div class="mb-3">
                             <label class="form-label text-secondary">Status</label>
-                            <input type="text" name="status" class="form-control" value="{{ pedido.status }}" required>
+                            <select name="status" class="form-control" required>
+                                <option value="pago" {% if pedido.status == 'pago' %}selected{% endif %}>Pago</option>
+                                <option value="npago" {% if pedido.status == 'npago' %}selected{% endif %}>Não Pago</option>
+                            </select>
                         </div>
                         
                         <h5 class="text-center text-white mt-4">Endereço</h5>
